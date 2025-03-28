@@ -52,10 +52,12 @@
             label12 = new Label();
             usuariotext = new TextBox();
             senhatxt = new TextBox();
+            fileSystemWatcher1 = new FileSystemWatcher();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -220,6 +222,7 @@
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Faça seu cadastro aqui!";
             linkLabel1.VisitedLinkColor = Color.White;
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // label6
             // 
@@ -298,6 +301,7 @@
             pictureBox4.Size = new Size(64, 64);
             pictureBox4.TabIndex = 22;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // label12
             // 
@@ -326,6 +330,11 @@
             senhatxt.Size = new Size(291, 18);
             senhatxt.TabIndex = 25;
             senhatxt.UseSystemPasswordChar = true;
+            // 
+            // fileSystemWatcher1
+            // 
+            fileSystemWatcher1.EnableRaisingEvents = true;
+            fileSystemWatcher1.SynchronizingObject = this;
             // 
             // Form1
             // 
@@ -364,6 +373,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -392,5 +402,6 @@
         private Label label12;
         private TextBox usuariotext;
         private TextBox senhatxt;
+        private FileSystemWatcher fileSystemWatcher1;
     }
 }

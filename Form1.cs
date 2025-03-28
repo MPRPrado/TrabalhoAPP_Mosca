@@ -5,21 +5,9 @@ namespace TrabalhoAPP
         public Form1()
         {
             InitializeComponent();
-            btlogin.Enabled = false;
-            senhatxt.PasswordChar = '*';
+ 
         }
-        private bool Login(string usuario, string senha, string arquivo) //receber a informação de login
-        {
-            foreach (string linha in File.ReadAllLines(arquivo))
-            {
-                string[] partes = linha.Split(';');
-                if (partes[0] == usuario && partes[1] == senha)
-                {
-                    return true; // Login correto
-                }
-            }
-            return false; // Nenhuma correspondência encontrada
-        }
+
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -48,19 +36,24 @@ namespace TrabalhoAPP
 
         private void ShowSenha_Click(object sender, EventArgs e)
         {
-            if (true)
-            {
-                senhatxt.PasswordChar = '\0'; //deixa a senha visivel
-            }
-            else
-            {
-                senhatxt.PasswordChar = '*';
-            }
+
         }
 
         private void btLogin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+            this.Hide();
         }
     }
 }
