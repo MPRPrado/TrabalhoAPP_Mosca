@@ -79,6 +79,7 @@
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.White;
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Enabled = false;
             textBox1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -89,6 +90,7 @@
             // 
             // textBox2
             // 
+            textBox2.BackColor = Color.White;
             textBox2.BorderStyle = BorderStyle.None;
             textBox2.Enabled = false;
             textBox2.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -99,6 +101,7 @@
             // 
             // textBox3
             // 
+            textBox3.BackColor = Color.White;
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Enabled = false;
             textBox3.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -123,6 +126,7 @@
             // 
             // linkLabel1
             // 
+            linkLabel1.ActiveLinkColor = Color.White;
             linkLabel1.AutoSize = true;
             linkLabel1.DisabledLinkColor = Color.White;
             linkLabel1.LinkColor = Color.White;
