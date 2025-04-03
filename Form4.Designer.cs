@@ -32,11 +32,11 @@
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
-            pictureBox3 = new PictureBox();
             button1 = new Button();
+            ok = new Button();
+            texto = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -70,18 +70,10 @@
             label1.Text = "Escreva no espaço abaixo:";
             label1.Click += label1_Click;
             // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.White;
-            pictureBox3.Location = new Point(83, 78);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(846, 496);
-            pictureBox3.TabIndex = 3;
-            pictureBox3.TabStop = false;
-            // 
             // button1
             // 
             button1.BackColor = Color.HotPink;
+            button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.Location = new Point(12, 562);
@@ -89,6 +81,30 @@
             button1.Size = new Size(32, 32);
             button1.TabIndex = 4;
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // ok
+            // 
+            ok.BackColor = Color.HotPink;
+            ok.FlatStyle = FlatStyle.Flat;
+            ok.Font = new Font("Segoe UI Semibold", 15F, FontStyle.Bold);
+            ok.ForeColor = Color.White;
+            ok.Location = new Point(886, 562);
+            ok.Name = "ok";
+            ok.Size = new Size(154, 36);
+            ok.TabIndex = 5;
+            ok.Text = "ok";
+            ok.TextAlign = ContentAlignment.TopCenter;
+            ok.UseVisualStyleBackColor = false;
+            ok.Click += Ok_Click;
+            // 
+            // texto
+            // 
+            texto.Location = new Point(112, 80);
+            texto.Multiline = true;
+            texto.Name = "texto";
+            texto.Size = new Size(928, 476);
+            texto.TabIndex = 6;
             // 
             // Form4
             // 
@@ -96,16 +112,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LavenderBlush;
             ClientSize = new Size(1052, 606);
+            Controls.Add(texto);
+            Controls.Add(ok);
             Controls.Add(button1);
-            Controls.Add(pictureBox3);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Name = "Form4";
             Text = "Form4";
+            Load += Form4_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -115,7 +132,8 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Label label1;
-        private PictureBox pictureBox3;
         private Button button1;
+        private Button ok;
+        private TextBox texto;
     }
 }

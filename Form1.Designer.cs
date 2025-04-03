@@ -181,6 +181,7 @@
             // 
             btLogin.BackColor = Color.HotPink;
             btLogin.Cursor = Cursors.AppStarting;
+            btLogin.Enabled = false;
             btLogin.FlatAppearance.BorderColor = Color.HotPink;
             btLogin.FlatAppearance.BorderSize = 0;
             btLogin.FlatAppearance.MouseDownBackColor = Color.HotPink;
@@ -330,6 +331,7 @@
             senhatxt.Size = new Size(291, 18);
             senhatxt.TabIndex = 25;
             senhatxt.UseSystemPasswordChar = true;
+            senhatxt.TextChanged += senhatxt_TextChanged;
             // 
             // fileSystemWatcher1
             // 
