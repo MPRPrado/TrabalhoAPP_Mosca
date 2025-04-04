@@ -21,5 +21,29 @@ namespace TrabalhoAPP
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string senha = ("senha.txt");
+            StreamWriter writer;
+            writer = File.AppendText(senha);
+            writer.WriteLine(textBox2.Text);
+            writer.Close();
+            MessageBox.Show("Cadastrado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Form3 form3 = new Form3();
+            form3.Show();
+            this.Hide();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ShowSenha_Click(object sender, EventArgs e)
+        {
+            textBox2.UseSystemPasswordChar = !textBox2.UseSystemPasswordChar;
+            
+        }
     }
 }

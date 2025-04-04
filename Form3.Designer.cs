@@ -32,13 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             criar = new Button();
             diarios = new GroupBox();
-            lay = new FlowLayoutPanel();
+            papai = new Button();
             label3 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             label4 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            button1 = new Button();
             diarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -48,7 +49,8 @@
             // criar
             // 
             criar.BackColor = Color.HotPink;
-            criar.FlatStyle = FlatStyle.Popup;
+            criar.FlatAppearance.BorderSize = 0;
+            criar.FlatStyle = FlatStyle.Flat;
             criar.Font = new Font("Segoe UI Semibold", 17F, FontStyle.Bold);
             criar.ForeColor = Color.White;
             criar.Location = new Point(802, 555);
@@ -61,7 +63,9 @@
             // 
             // diarios
             // 
-            diarios.Controls.Add(lay);
+            diarios.BackgroundImageLayout = ImageLayout.None;
+            diarios.Controls.Add(button1);
+            diarios.Controls.Add(papai);
             diarios.FlatStyle = FlatStyle.Flat;
             diarios.Font = new Font("Segoe UI", 12F);
             diarios.ForeColor = Color.HotPink;
@@ -73,12 +77,25 @@
             diarios.Text = "Diarios";
             diarios.Enter += groupBox1_Enter;
             // 
-            // lay
+            // papai
             // 
-            lay.Location = new Point(6, 28);
-            lay.Name = "lay";
-            lay.Size = new Size(707, 339);
-            lay.TabIndex = 0;
+            papai.BackColor = Color.White;
+            papai.BackgroundImageLayout = ImageLayout.None;
+            papai.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
+            papai.FlatAppearance.BorderSize = 0;
+            papai.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 0, 0);
+            papai.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0, 0);
+            papai.FlatStyle = FlatStyle.Flat;
+            papai.Location = new Point(21, 28);
+            papai.Margin = new Padding(0);
+            papai.Name = "papai";
+            papai.Size = new Size(675, 40);
+            papai.TabIndex = 0;
+            papai.Text = "Diário Inicial";
+            papai.UseVisualStyleBackColor = false;
+            papai.Visible = false;
+            papai.VisibleChanged += papai_VisibleChanged;
+            papai.Click += papai_Click;
             // 
             // label3
             // 
@@ -146,6 +163,21 @@
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.HotPink;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI Semibold", 17F, FontStyle.Bold);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(475, 328);
+            button1.Name = "button1";
+            button1.Size = new Size(238, 39);
+            button1.TabIndex = 11;
+            button1.Text = "Apagar diário";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click_1;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -158,8 +190,8 @@
             Controls.Add(pictureBox3);
             Controls.Add(label3);
             Controls.Add(pictureBox2);
-            Controls.Add(diarios);
             Controls.Add(criar);
+            Controls.Add(diarios);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form3";
@@ -184,6 +216,7 @@
         private Label label1;
         private PictureBox pictureBox1;
         private FlowLayoutPanel flowLayoutPanel1;
-        private FlowLayoutPanel lay;
+        private Button papai;
+        private Button button1;
     }
 }

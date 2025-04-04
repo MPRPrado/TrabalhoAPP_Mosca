@@ -44,6 +44,7 @@
             // 
             textBox1.BackColor = Color.White;
             textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Enabled = false;
             textBox1.Font = new Font("Segoe UI", 20.25F);
             textBox1.Location = new Point(37, 274);
             textBox1.Name = "textBox1";
@@ -62,6 +63,7 @@
             button1.TabIndex = 4;
             button1.Text = "Criar senha";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label2
             // 
@@ -118,6 +120,7 @@
             ShowSenha.Size = new Size(30, 27);
             ShowSenha.TabIndex = 9;
             ShowSenha.UseVisualStyleBackColor = true;
+            ShowSenha.Click += ShowSenha_Click;
             // 
             // textBox2
             // 
@@ -128,6 +131,8 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(360, 18);
             textBox2.TabIndex = 10;
+            textBox2.UseSystemPasswordChar = true;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // Form6
             // 

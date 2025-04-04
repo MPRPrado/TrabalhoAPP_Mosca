@@ -78,22 +78,33 @@ namespace TrabalhoAPP
             }
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            senhatext.UseSystemPasswordChar = !senhatext.UseSystemPasswordChar;
-        }
 
         private void criarbot_Click(object sender, EventArgs e)
         {
             string arquivo = ("arquivo.txt");
             StreamWriter writer;
             writer = File.AppendText(arquivo);
-            writer.WriteLine(usuariotext.Text + ";" +senhatext.Text);
+            writer.WriteLine(usuariotext.Text + ";" + senhatext.Text);
             writer.Close();
-            MessageBox.Show("Cadastrado com sucesso","Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Cadastrado com sucesso", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Hide();
             Form1 Login = new Form1();
             Login.Show();
+        }
+
+        
+
+        private void Showsenha_Click(object sender, EventArgs e)
+        {
+            this.ShowSenha = new System.Windows.Forms.Button();
+            // Outras inicializações de componentes
+
+            // Defina as propriedades visuais do botão Showsenha
+            this.ShowSenha.BackColor = System.Drawing.SystemColors.Control;
+            this.ShowSenha.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ShowSenha.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+
+            senhatext.UseSystemPasswordChar = !senhatext.UseSystemPasswordChar;
         }
     }
 }

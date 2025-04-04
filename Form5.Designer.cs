@@ -36,6 +36,7 @@
             label3 = new Label();
             button1 = new Button();
             ShowSenha = new Button();
+            senhaD = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -43,6 +44,7 @@
             // 
             textBox1.BackColor = Color.White;
             textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Enabled = false;
             textBox1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(37, 274);
             textBox1.Name = "textBox1";
@@ -105,6 +107,7 @@
             button1.TabIndex = 5;
             button1.Text = "Abrir Arquivo";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // ShowSenha
             // 
@@ -119,6 +122,17 @@
             ShowSenha.Size = new Size(30, 27);
             ShowSenha.TabIndex = 8;
             ShowSenha.UseVisualStyleBackColor = true;
+            ShowSenha.Click += ShowSenha_Click;
+            // 
+            // senhaD
+            // 
+            senhaD.BorderStyle = BorderStyle.None;
+            senhaD.Location = new Point(37, 284);
+            senhaD.Margin = new Padding(0);
+            senhaD.Name = "senhaD";
+            senhaD.Size = new Size(360, 16);
+            senhaD.TabIndex = 9;
+            senhaD.UseSystemPasswordChar = true;
             // 
             // Form5
             // 
@@ -126,6 +140,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LavenderBlush;
             ClientSize = new Size(458, 442);
+            Controls.Add(senhaD);
             Controls.Add(ShowSenha);
             Controls.Add(button1);
             Controls.Add(label3);
@@ -149,5 +164,6 @@
         private Label label3;
         private Button button1;
         private Button ShowSenha;
+        private TextBox senhaD;
     }
 }

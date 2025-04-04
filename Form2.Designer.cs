@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
             textBox1 = new TextBox();
@@ -45,23 +44,13 @@
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
-            Showsenha = new Button();
             criarbot = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            Showsenha = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = Color.LavenderBlush;
-            pictureBox1.Location = new Point(226, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(474, 481);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -124,10 +113,10 @@
             // 
             // linkLabel1
             // 
-            linkLabel1.ActiveLinkColor = Color.White;
+            linkLabel1.ActiveLinkColor = Color.HotPink;
             linkLabel1.AutoSize = true;
             linkLabel1.DisabledLinkColor = Color.White;
-            linkLabel1.LinkColor = Color.White;
+            linkLabel1.LinkColor = Color.HotPink;
             linkLabel1.Location = new Point(12, 9);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(119, 15);
@@ -205,6 +194,7 @@
             senhatext.Name = "senhatext";
             senhatext.Size = new Size(316, 18);
             senhatext.TabIndex = 27;
+            senhatext.UseSystemPasswordChar = true;
             senhatext.TextChanged += senhatext_TextChanged;
             // 
             // pictureBox3
@@ -237,23 +227,6 @@
             pictureBox5.TabIndex = 31;
             pictureBox5.TabStop = false;
             // 
-            // Showsenha
-            // 
-            Showsenha.BackColor = Color.LavenderBlush;
-            Showsenha.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
-            Showsenha.FlatAppearance.BorderSize = 0;
-            Showsenha.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 0, 0);
-            Showsenha.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0, 0);
-            Showsenha.FlatStyle = FlatStyle.Flat;
-            Showsenha.ForeColor = SystemColors.ControlText;
-            Showsenha.Image = (Image)resources.GetObject("Showsenha.Image");
-            Showsenha.Location = new Point(656, 356);
-            Showsenha.Name = "Showsenha";
-            Showsenha.Size = new Size(32, 32);
-            Showsenha.TabIndex = 7;
-            Showsenha.UseVisualStyleBackColor = true;
-            Showsenha.Click += button1_Click_1;
-            // 
             // criarbot
             // 
             criarbot.BackColor = Color.HotPink;
@@ -263,7 +236,7 @@
             criarbot.FlatAppearance.BorderSize = 0;
             criarbot.FlatAppearance.MouseDownBackColor = Color.HotPink;
             criarbot.FlatAppearance.MouseOverBackColor = Color.HotPink;
-            criarbot.FlatStyle = FlatStyle.Popup;
+            criarbot.FlatStyle = FlatStyle.Flat;
             criarbot.Font = new Font("Leelawadee UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             criarbot.ForeColor = Color.White;
             criarbot.Location = new Point(338, 421);
@@ -274,17 +247,35 @@
             criarbot.UseVisualStyleBackColor = false;
             criarbot.Click += criarbot_Click;
             // 
+            // Showsenha
+            // 
+            Showsenha.BackColor = Color.LavenderBlush;
+            Showsenha.FlatAppearance.BorderColor = Color.FromArgb(0, 0, 0, 0);
+            Showsenha.FlatAppearance.BorderSize = 0;
+            Showsenha.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 0, 0);
+            Showsenha.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 0, 0);
+            Showsenha.FlatStyle = FlatStyle.Flat;
+            Showsenha.ForeColor = SystemColors.ControlText;
+            Showsenha.Image = (Image)resources.GetObject("Showsenha.Image");
+            Showsenha.Location = new Point(656, 357);
+            Showsenha.Name = "Showsenha";
+            Showsenha.Size = new Size(30, 27);
+            Showsenha.TabIndex = 7;
+            Showsenha.Text = "          ";
+            Showsenha.UseVisualStyleBackColor = false;
+            Showsenha.Click += Showsenha_Click;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.HotPink;
+            BackColor = Color.LavenderBlush;
             ClientSize = new Size(910, 505);
+            Controls.Add(Showsenha);
             Controls.Add(criarbot);
             Controls.Add(usuariotext);
             Controls.Add(email);
             Controls.Add(senhatext);
-            Controls.Add(Showsenha);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
@@ -297,10 +288,9 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Controls.Add(pictureBox1);
+            ForeColor = Color.LavenderBlush;
             Name = "Form2";
             Text = "Cadastro";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -310,8 +300,6 @@
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Label label1;
         private TextBox textBox1;
@@ -330,5 +318,6 @@
         private PictureBox pictureBox5;
         private Button ShowSenha;
         private Button criarbot;
+        
     }
 }
