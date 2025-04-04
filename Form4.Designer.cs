@@ -93,7 +93,7 @@
             ok.Name = "ok";
             ok.Size = new Size(154, 36);
             ok.TabIndex = 5;
-            ok.Text = "ok";
+            ok.Text = "Salvar";
             ok.TextAlign = ContentAlignment.TopCenter;
             ok.UseVisualStyleBackColor = false;
             ok.Click += Ok_Click;
