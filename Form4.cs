@@ -22,7 +22,7 @@ namespace TrabalhoAPP
         }/*Clicar salvar vai criar o arquivo de texto e se ja existir uma senha para esse arquivo ele só salva*/
         private bool Login(string arquivo) //receber a informação de login  
         {
-            string senha = @"C:\Users\mathe\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\senha";
+            string senha = @"C:\Users\alunos\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\senha.txt";
             return File.Exists(senha);
         }
 
@@ -67,26 +67,26 @@ namespace TrabalhoAPP
             string arquivo = "Diario.txt";
            // string senhanova = senha.Text; // Supondo que você tenha um TextBox para a senha
             string textoConteudo = texto.Text;
-            string senha = @"C:\Users\mathe\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\senha";
+            string senha = @"C:\Users\alunos\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\senha";
             
                 // Verifica se a senha está correta
                 if (Login(senha))
                 {
-                SalvarConteudo(arquivo, textoConteudo);
-                MessageBox.Show("Conteúdo salvo com sucesso.", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Form6 form6 = new Form6();
-                form6.Show();
-                this.Hide();
-                    
-            }
-            else
-            {
                 SalvarConteudo(arquivo, textoConteudo);
                 Form3 form3 = new Form3();
                 form3.Show();
                 this.Hide();
                 MessageBox.Show("Conteúdo salvo com sucesso.", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 // Salva o conteúdo no arquivo
+                    
+            }
+            else
+            {
+                SalvarConteudo(arquivo, textoConteudo);
+                MessageBox.Show("Conteúdo salvo com sucesso.", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Form6 form6 = new Form6();
+                form6.Show();
+                this.Hide();
 
             }
         }

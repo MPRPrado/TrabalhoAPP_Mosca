@@ -28,7 +28,7 @@ namespace TrabalhoAPP
             InitializeComponent();
             //criar.Click += Criar_Click;
             papai.Visible = false; // Inicialmente invisível
-            string caminhoArquivo = @"C:\Users\mathe\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\Diario.txt";
+            string caminhoArquivo = @"C:\Users\alunos\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\Diario.txt";
             if (papai1(caminhoArquivo))
             {
                 papai.Visible = true; // Torna o botão visível
@@ -101,8 +101,8 @@ namespace TrabalhoAPP
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            string caminhoArquivo = @"C:\Users\mathe\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\Diario.txt";
-            string senha = @"C:\Users\mathe\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\senha.txt";
+            string caminhoArquivo = @"C:\Users\alunos\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\Diario.txt";
+            string senha = @"C:\Users\alunos\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\senha.txt";
             if (File.Exists(caminhoArquivo))
             {
                 File.Delete(caminhoArquivo);

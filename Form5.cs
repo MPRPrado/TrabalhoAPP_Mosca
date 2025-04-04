@@ -44,13 +44,13 @@ namespace TrabalhoAPP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string caminhoArquivo = @"C:\Users\mathe\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\Diario.txt";
+            string caminhoArquivo = @"C:\Users\alunos\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\Diario.txt";
             if (File.Exists(caminhoArquivo))
             {
                 string conteudo = File.ReadAllText(caminhoArquivo);
 
                 string senha = senhaD.Text;
-                string arquivo = @"C:\Users\mathe\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\senha.txt";
+                string arquivo = @"C:\Users\alunos\source\repos\TrabalhoAPP_Mosca\bin\Debug\net8.0-windows\senha.txt";
 
                 bool autenticado = Login(senha, arquivo);
                 if (autenticado)
